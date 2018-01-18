@@ -74,6 +74,7 @@ export
     InferenceState,
     InferenceMethod,
     ExactInference,
+    GreedyExactInference,
     LikelihoodWeightingInference,
     LoopyBelief,
     GibbsSamplingNodewise,
