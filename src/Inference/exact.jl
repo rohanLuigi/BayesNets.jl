@@ -15,7 +15,7 @@ function infer{BN<:DiscreteBayesNet}(im::ExactInference, inf::InferenceState{BN}
     hidden = setdiff(nodes, vcat(query, names(evidence)))
     factors = map(n -> Factor(bn, n, evidence), nodes)
     # successively remove the hidden nodes
-    # order impacts performance, but we currently have no ordering heuristics
+    # order impacts performance, but no ordering heuristics used here
     return removeNodes(hidden,factors)
 end
 
